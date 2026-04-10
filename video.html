@@ -41,8 +41,7 @@
             <p id="description"><strong>Description:</strong><br>Loading...</p>
         </div>
 
-        <ul style="list-style:none; padding:0; font-size:15px;" id="video-info">
-        </ul>
+        <ul style="list-style:none; padding:0; font-size:15px;" id="video-info"></ul>
 
         <div style="margin: 25px 0;" id="tags">
             <strong>Tags:</strong><br><br>
@@ -51,9 +50,7 @@
 
         <h2>Related Videos</h2>
         <div class="thumbs">
-            <ul>
-                <!-- Related videos yahan JS se aayenge -->
-            </ul>
+            <ul id="related-videos"></ul>
         </div>
 
         <!-- Pagination -->
@@ -64,7 +61,6 @@
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
                 <li><a href="#" class="dots">. . .</a></li>
                 <li><a href="#" class="next">Next <i class="fa fa-chevron-right"></i></a></li>
             </ul>
@@ -74,58 +70,34 @@
 </section>
 
 <script>
-// Video Data
+// All Videos Data (Sab videos add kar diye)
 const videos = {
-    1: {
-        title: "Sexy Girl Banging Hard Fucking & Talking Dirty",
-        image: "https://i.postimg.cc/Y2LWvyfp/1714795154511-scaled-1-400x225.jpg",
-        link: "https://1024terabox.com/s/1K2DlW0iWx2fx4Qy38gaEhw",
-        description: "Hot sexy girl banging very hard with dirty talking. Intense fucking session in full HD quality. Must watch this amazing video!",
-        views: "1.2 Million",
-        tags: ["Hard Fuck", "Dirty Talk", "Big Boobs", "Indian Girl"]
-    },
-    2: {
-        title: "Hot Big Boobs Girl Hard Fucking Intense Session",
-        image: "https://i.postimg.cc/CKfgGDvm/1715061417522-scaled-1-400x225.jpg",
-        link: "https://1024terabox.com/s/1LCyIgQsrMZeD0VKZV9jQQA",
-        description: "Beautiful big boobs girl doing hard and intense fucking session. Very hot and seductive performance.",
-        views: "892K",
-        tags: ["Big Boobs", "Hardcore", "Intense", "Busty"]
-    },
-    3: {
-        title: "Kinky Hot Couple Pussy & Ass Fucking",
-        image: "https://i.postimg.cc/nrSBf6vV/1714622584039-scaled-1-400x225.jpg",
-        link: "https://1024terabox.com/s/1T-zwgdAvXkwusBRI-skzGw",
-        description: "Kinky couple enjoying wild pussy and ass fucking. Very passionate and hardcore scene.",
-        views: "654K",
-        tags: ["Couple", "Anal", "Kinky", "Hard Fuck"]
-    },
-    4: {
-        title: "Desi Punjabi Girl Hard Fucking Watch Full",
-        image: "https://i.postimg.cc/TP7sSsB5/1714620966132-scaled-1-400x225.jpg",
-        link: "https://1024terabox.com/s/1dTbkMz_FbJmT2VM7i0ZxBw",
-        description: "Hot desi Punjabi girl getting fucked hard in full video. Must watch desi hardcore action.",
-        views: "1.1M",
-        tags: ["Desi", "Punjabi", "Indian", "Hardcore"]
-    }
+    1: { title: "Sexy Girl Banging Hard Fucking & Talking Dirty", thumb: "https://i.postimg.cc/Y2LWvyfp/1714795154511-scaled-1-400x225.jpg", link: "https://1024terabox.com/s/1K2DlW0iWx2fx4Qy38gaEhw", desc: "Hot sexy girl banging very hard with dirty talking. Intense fucking session in full HD quality.", views: "1.2M", tags: ["Hard Fuck", "Dirty Talk", "Big Boobs"] },
+    2: { title: "Hot Big Boobs Girl Hard Fucking Intense Session", thumb: "https://i.postimg.cc/CKfgGDvm/1715061417522-scaled-1-400x225.jpg", link: "https://1024terabox.com/s/1LCyIgQsrMZeD0VKZV9jQQA", desc: "Beautiful big boobs girl doing hard and intense fucking session.", views: "892K", tags: ["Big Boobs", "Hardcore"] },
+    3: { title: "Kinky Hot Couple Pussy & Ass Fucking", thumb: "https://i.postimg.cc/nrSBf6vV/1714622584039-scaled-1-400x225.jpg", link: "https://1024terabox.com/s/1T-zwgdAvXkwusBRI-skzGw", desc: "Kinky couple enjoying wild pussy and ass fucking.", views: "654K", tags: ["Couple", "Anal"] },
+    4: { title: "Desi Punjabi Girl Hard Fucking Watch Full", thumb: "https://i.postimg.cc/TP7sSsB5/1714620966132-scaled-1-400x225.jpg", link: "https://1024terabox.com/s/1dTbkMz_FbJmT2VM7i0ZxBw", desc: "Hot desi Punjabi girl getting fucked hard.", views: "1.1M", tags: ["Desi", "Punjabi"] },
+    
+    // Page 2 ke naye videos
+    5: { title: "Most Viral Model Hard Fucking Session", thumb: "https://i.postimg.cc/HsmCbqmy/1714621406051-scaled-1-400x225.jpg", link: "https://1024terabox.com/s/1nMYl_WnbTqI8DymUVMq53w", desc: "Most viral model hard fucking session full video.", views: "945K", tags: ["Viral", "Model", "Hard Fuck"] },
+    6: { title: "Sexy Busty Maal Hard Fucking Full Video", thumb: "https://i.postimg.cc/8C0vxd4c/1714620374046-scaled-1-400x225.jpg", link: "https://1024terabox.com/s/1DqiWLMPf-0Xe705_SrK-pQ", desc: "Sexy busty maal hard fucking full video.", views: "1.3M", tags: ["Busty", "Hardcore"] },
+    7: { title: "Sexy Busty Maal Hard Fucking Full Video", thumb: "https://i.postimg.cc/ZRXMh2jc/1714619770275-scaled-1-400x225.jpg", link: "https://1024terabox.com/s/1zofAXMk0KZoBlTkuBQcvYw", desc: "Very hot busty maal hardcore fucking.", views: "876K", tags: ["Busty", "Desi"] },
+    8: { title: "Sexy Young Hot Ass GF Hard Fucking", thumb: "https://i.postimg.cc/RhVzNjKK/Be-Funky-collage-3-400x225.jpg", link: "https://1024terabox.com/s/1MXToNAicSqRC4UKUXO7kHA", desc: "Sexy young hot ass GF hard fucking.", views: "1.1M", tags: ["GF", "Big Ass"] }
+    // Agar aur videos add karne hain to yahan add kar sakte ho
 };
 
-// Get video ID from URL
 const urlParams = new URLSearchParams(window.location.search);
-const videoId = urlParams.get('v') || 1;   // default 1
+const videoId = parseInt(urlParams.get('v')) || 1;
+const video = videos[videoId] || videos[1];
 
-const video = videos[videoId];
-
-// Fill the content
 document.getElementById('video-title').textContent = video.title;
-document.getElementById('main-image').src = video.image;
+document.getElementById('main-image').src = video.thumb;
 document.getElementById('main-link').href = video.link;
 document.getElementById('title-link').textContent = video.title;
 document.getElementById('title-link').href = video.link;
-document.getElementById('description').innerHTML = `<strong>Description:</strong><br>${video.description}`;
+document.getElementById('description').innerHTML = `<strong>Description:</strong><br>${video.desc}`;
 
 document.getElementById('video-info').innerHTML = `
-    <li><strong>Duration:</strong> 10:30</li>
+    <li><strong>Duration:</strong> ${video.duration || "10:30"}</li>
     <li><strong>Views:</strong> ${video.views}</li>
     <li><strong>Added:</strong> 2 days ago</li>
 `;
