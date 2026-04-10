@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Most Popular - Page 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        @media (max-width: 767px) {
+            .thumbs ul { display: flex; flex-wrap: wrap; justify-content: space-between; }
+            .thumbs ul li { width: 48% !important; margin: 1% 0 !important; }
+        }
+        .pagination li a { cursor: pointer; }
+        .active { font-weight: bold; background: #e50914; color: white; border-radius: 4px; }
+    </style>
+</head>
+<body>
+<header>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="224" height="49" alt=""></a>
+    </div>
+</nav>
+</header>
+<section class="main" style="padding-bottom: 126px;">
+    <div class="container">
+        <div class="h2"><h2>Most Popular - Page 3</h2></div>
+        <div class="thumbs" id="video-grid"></div>
+        
+        <div class="text-center" style="margin: 40px 0;">
+            <ul class="pagination" id="pagination"></ul>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="text-copy">2026 © Your Site. All Rights Reserved.</div>
+    </div>
+</footer>
+
+<script>
+const page3Videos = [
+    { id: 41, title: "INDIAN COLLEGE GIRL CUM IN MOUTH", thumb: "https://i.postimg.cc/vmZXnTSc/Whats-App-Image-2024-12-13-at-11-10-40-8d32042a-(1).jpg", link: "video.html?v=41", duration: "08:20" },
+    { id: 42, title: "INDIAN COUPLE KISSING IN COUPLE AREA", thumb: "https://i.postimg.cc/FsGLLptn/Whats-App-Image-2024-12-13-at-10-56-22-803c6887-(1).jpg", link: "video.html?v=42", duration: "06:15" },
+    { id: 43, title: "Indian Girl Blowjob Mouth Hug Xxx Videos Sex", thumb: "https://i.postimg.cc/15RgsFgH/Whats-App-Image-2024-10-05-at-00-11-59-8fcff522-(1).jpg", link: "video.html?v=43", duration: "12:30" },
+    { id: 44, title: "Indian Girl Blowjob Cum in Mouth in Car", thumb: "https://i.postimg.cc/PxtHYWn6/Whats-App-Image-2024-10-04-at-10-54-57-1c27ffff-768x1352-(1).jpg", link: "video.html?v=44", duration: "08:55" },
+    { id: 45, title: "XXX VIDEO FUCKING", thumb: "https://i.postimg.cc/9FTW3FbZ/Whats-App-Image-2024-10-06-at-02-36-15-b37f330d-1-768x1306-(1).jpg", link: "video.html?v=45", duration: "13:10" },
+    { id: 46, title: "YE PUBLIC AREA MA KAYA CHL RHA HA", thumb: "https://i.postimg.cc/VNjZzMCs/Whats-App-Image-2024-12-11-at-22-59-52-48bf518f-(1).jpg", link: "video.html?v=46", duration: "10:20" },
+    { id: 47, title: "KYA CHUDAI HAI YAR XXX VIDEOS", thumb: "https://i.postimg.cc/cHVVTwV2/Whats-App-Image-2024-10-06-at-07-03-14-498a76d3-(1).jpg", link: "video.html?v=47", duration: "15:45" },
+    { id: 48, title: "Pakistani Girl Blowjob In Car Xxx Video", thumb: "https://i.postimg.cc/QxPgBtgD/Whats-App-Image-2024-10-06-at-02-12-01-fe3e9a0a-1-1110x1536-(1).jpg", link: "video.html?v=48", duration: "09:15" },
+    { id: 49, title: "Fingering Masturbation Xxxx Videos", thumb: "https://i.postimg.cc/xTjpGcbJ/Whats-App-Image-2024-10-06-at-02-05-17-4b4e6174-768x1346-(1).jpg", link: "video.html?v=49", duration: "08:40" },
+    { id: 50, title: "18 Year Old Boys Fucking Outdoor Xvideos Movies", thumb: "https://i.postimg.cc/0yY682cZ/Whats-App-Image-2024-10-04-at-11-07-24-13956492-927x1536-(1).jpg", link: "video.html?v=50", duration: "12:20" },
+    { id: 51, title: "Indian Girl Blowjb Xxx Videos Movies", thumb: "https://i.postimg.cc/J7Sc00c9/Whats-App-Image-2024-10-04-at-10-24-42-6b8ee4b7-768x1317-(1).jpg", link: "video.html?v=51", duration: "10:55" },
+    { id: 52, title: "SAB MAL MUH MA NIKAL DIYA", thumb: "https://i.postimg.cc/Hs4cmkZC/Whats-App-Image-2024-12-11-at-23-24-34-ccad5220-(1).jpg", link: "video.html?v=52", duration: "07:30" },
+    { id: 53, title: "FATIMA JATOI PAKISTANI TIKTOKER VIRAL MMS 6 MIN", thumb: "https://i.postimg.cc/gkNz4Xtc/IMG-20260113-013354-300-(1).jpg", link: "video.html?v=53", duration: "06:00" },
+    { id: 54, title: "INDIAN DESI VIRAL MMS", thumb: "https://i.postimg.cc/hv2k8x4K/Whats-App-Image-2024-12-11-at-21-08-38-e440eae6-(1).jpg", link: "video.html?v=54", duration: "08:25" },
+    { id: 55, title: "DEEPAK KALAL NEW FUCK VIRAL VIDEO", thumb: "https://i.postimg.cc/44WqS6G0/Whats-App-Image-2024-12-11-at-21-45-45-f0b9a375-(1).jpg", link: "video.html?v=55", duration: "11:10" },
+    { id: 56, title: "BLOWJOB AND FUCK IN CAR", thumb: "https://i.postimg.cc/jSHhGTN5/Whats-App-Image-2024-12-11-at-21-58-48-1936b6c1-(1).jpg", link: "video.html?v=56", duration: "09:45" },
+    { id: 57, title: "INDIAN YOUNG COUPLE XXX", thumb: "https://i.postimg.cc/SKwCstW4/Whats-App-Image-2024-12-11-at-22-02-35-1a4d984d-(1).jpg", link: "video.html?v=57", duration: "14:30" },
+    { id: 58, title: "XXX VIDEO FUCKING", thumb: "https://i.postimg.cc/9FTW3FbZ/Whats-App-Image-2024-10-06-at-02-36-15-b37f330d-1-768x1306-(1).jpg", link: "video.html?v=58", duration: "13:10" },
+    { id: 59, title: "YE PUBLIC AREA MA KAYA CHL RHA HA", thumb: "https://i.postimg.cc/VNjZzMCs/Whats-App-Image-2024-12-11-at-22-59-52-48bf518f-(1).jpg", link: "video.html?v=59", duration: "10:20" },
+    { id: 60, title: "KYA CHUDAI HAI YAR XXX VIDEOS", thumb: "https://i.postimg.cc/cHVVTwV2/Whats-App-Image-2024-10-06-at-07-03-14-498a76d3-(1).jpg", link: "video.html?v=60", duration: "15:45" }
+];
+
+let html = '<ul>';
+page3Videos.forEach(v => {
+    html += `
+        <li>
+            <div class="thumb">
+                <div class="thumb-content">
+                    <a href="${v.link}">
+                        <img src="${v.thumb}" alt="">
+                        <span class="duration">${v.duration}</span>
+                    </a>
+                </div>
+                <div class="thumb-header" style="height:45px;"><h3>${v.title}</h3></div>
+                <div class="thumb-footer">
+                    <span class="views"><i class="fa fa-eye"></i> 1.2M</span>
+                    <span class="like"><i class="fa fa-thumbs-o-up"></i> 90%</span>
+                </div>
+            </div>
+        </li>`;
+});
+html += '</ul>';
+document.getElementById('video-grid').innerHTML = html;
+
+document.getElementById('pagination').innerHTML = `
+    <li><a href="index2.html" class="prev"><i class="fa fa-chevron-left"></i> Prev</a></li>
+    <li><a href="index.html">1</a></li>
+    <li><a href="index2.html">2</a></li>
+    <li class="active"><a href="index3.html">3</a></li>
+    <li><a href="index4.html">4</a></li>
+    <li><a href="index4.html" class="next">Next <i class="fa fa-chevron-right"></i></a></li>
+`;
+</script>
+</body>
+</html>
