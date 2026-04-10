@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
     <style>
         @media (max-width: 767px) {
             .thumbs ul { display: flex; flex-wrap: wrap; justify-content: space-between; }
@@ -16,7 +15,6 @@
     </style>
 </head>
 <body>
-
 <header>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -28,12 +26,12 @@
 <section class="main" style="padding-bottom: 126px;">
     <div class="container">
         <div class="h2"><h2>Most popular</h2></div>
+        
         <div class="thumbs">
             <ul>
                 <li>
                     <div class="thumb">
                         <div class="thumb-content">
-                            <!-- Yahan index se video.html connect ho raha hai -->
                             <a href="video.html" target="_blank" rel="noopener">
                                 <img src="https://i.postimg.cc/Y2LWvyfp/1714795154511-scaled-1-400x225.jpg" alt="">
                                 <span class="duration">10:30</span>
@@ -48,7 +46,7 @@
                         </div>
                     </div>
                 </li>
-
+                <!-- Baaki 3 videos same rahegi -->
                 <li>
                     <div class="thumb">
                         <div class="thumb-content">
@@ -66,7 +64,6 @@
                         </div>
                     </div>
                 </li>
-
                 <li>
                     <div class="thumb">
                         <div class="thumb-content">
@@ -84,7 +81,6 @@
                         </div>
                     </div>
                 </li>
-
                 <li>
                     <div class="thumb">
                         <div class="thumb-content">
@@ -104,6 +100,21 @@
                 </li>
             </ul>
         </div>
+
+        <!-- Pagination Added Here -->
+        <div class="text-center" style="margin: 40px 0;">
+            <ul class="pagination">
+                <li><a href="#" class="prev"><i class="fa fa-chevron-left"></i> Prev</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" class="dots">. . .</a></li>
+                <li><a href="#" class="next">Next <i class="fa fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
@@ -112,6 +123,5 @@
         <div class="text-copy">2026 © Your Site. All Rights Reserved.</div>
     </div>
 </footer>
-
 </body>
 </html>
