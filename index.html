@@ -24,21 +24,18 @@
     </div>
 </nav>
 </header>
-
 <section class="main" style="padding-bottom: 126px;">
     <div class="container">
-        <div class="h2"><h2>Most popular</h2></div>
-        
+        <div class="h2"><h2>Most Popular</h2></div>
+       
         <div class="thumbs" id="video-grid"></div>
-
+        
         <!-- Pagination -->
         <div class="text-center" style="margin: 40px 0;">
             <ul class="pagination" id="pagination"></ul>
         </div>
-
     </div>
 </section>
-
 <footer class="footer">
     <div class="container">
         <div class="text-copy">2026 © Your Site. All Rights Reserved.</div>
@@ -46,56 +43,92 @@
 </footer>
 
 <script>
-// All Videos (Aapke diye gaye saare videos + purane)
+// All 74 Videos
 const allVideos = [
-    {
-        id: 1,
-        title: "Sexy Girl Banging Hard Fucking & Talking Dirty",
-        thumb: "https://i.postimg.cc/Y2LWvyfp/1714795154511-scaled-1-400x225.jpg",
-        link: "video.html?v=1",
-        duration: "10:30"
-    },
-    {
-        id: 2,
-        title: "Hot Big Boobs Girl Hard Fucking Intense Session",
-        thumb: "https://i.postimg.cc/CKfgGDvm/1715061417522-scaled-1-400x225.jpg",
-        link: "video.html?v=2",
-        duration: "10:30"
-    },
-    {
-        id: 3,
-        title: "Kinky Hot Couple Pussy & Ass Fucking",
-        thumb: "https://i.postimg.cc/nrSBf6vV/1714622584039-scaled-1-400x225.jpg",
-        link: "video.html?v=3",
-        duration: "10:30"
-    },
-    {
-        id: 4,
-        title: "Desi Punjabi Girl Hard Fucking Watch Full",
-        thumb: "https://i.postimg.cc/TP7sSsB5/1714620966132-scaled-1-400x225.jpg",
-        link: "video.html?v=4",
-        duration: "10:30"
-    },
-    // Page 2 aur aage ke videos
-    { title: "Most Viral Model Hard Fucking Session", link: "https://1024terabox.com/s/1nMYl_WnbTqI8DymUVMq53w", thumb: "https://i.postimg.cc/HsmCbqmy/1714621406051-scaled-1-400x225.jpg", duration: "10:30" },
-    { title: "Sexy Busty Maal Hard Fucking Full Video", link: "https://1024terabox.com/s/1DqiWLMPf-0Xe705_SrK-pQ", thumb: "https://i.postimg.cc/8C0vxd4c/1714620374046-scaled-1-400x225.jpg", duration: "10:30" },
-    { title: "Sexy Busty Maal Hard Fucking Full Video", link: "https://1024terabox.com/s/1zofAXMk0KZoBlTkuBQcvYw", thumb: "https://i.postimg.cc/ZRXMh2jc/1714619770275-scaled-1-400x225.jpg", duration: "10:30" },
-    { title: "Sexy Young Hot Ass GF Hard Fucking", link: "https://1024terabox.com/s/1MXToNAicSqRC4UKUXO7kHA", thumb: "https://i.postimg.cc/RhVzNjKK/Be-Funky-collage-3-400x225.jpg", duration: "10:30" },
-    { title: "Hot Desi Bhabhi MMS Scandal Leaked", link: "https://1024terabox.com/s/19fRq8Hmp5cTWZ3nn-zmGuw", thumb: "https://i.postimg.cc/MHfdmsWr/Be-Funky-collage_3_1_400x225.jpg", duration: "12:00" },
-    { title: "Aunty Hardcore Fucking in Saree", link: "https://1024terabox.com/s/1-9HfBmZ8SKbcq-67x47QFw", thumb: "https://i.postimg.cc/fLj46CYh/qwfqf-400x225.jpg", duration: "08:30" },
-    { title: "Beautiful Girl Hard Fucking Big Cock Full Video", link: "https://1024terabox.com/s/1Njrv0ZnGIkqGf4k8A7Fc1g", thumb: "https://i.postimg.cc/9M9KbFFQ/Be-Funky-collage-1-10-400x225.jpg", duration: "08:30" },
-    { title: "Desi Girl Selfie Video Gone Viral", link: "https://1024terabox.com/s/1f-2w1VxGJq0FasGrCEWYuA", thumb: "https://i.postimg.cc/QC4z3yCG/Be-Funky-collage-4-400x225.jpg", duration: "05:00" },
-    { title: "Submissive Desi Hard Fucking Big Cock", link: "https://1024terabox.com/s/1s5FjjRC-dutnylGrKOiM2A", thumb: "https://i.postimg.cc/fLgpj2ds/cacac-400x225.jpg", duration: "15:00" },
-    { title: "Hot Sexy Ass Punjabi GF Hard Fucking", link: "https://1024terabox.com/s/1qET24psqtuE-hMv_WT0SYw", thumb: "https://i.postimg.cc/cCyjbKFp/Be-Funky-collage-2-1-400x225.jpg", duration: "10:30" },
-    { title: "Hot Figure Wife Riding Hard Fucking", link: "https://1024terabox.com/s/1ldJzT6LkvdKHaR8knI3saA", thumb: "https://i.postimg.cc/Gmhpz8w4/Be-Funky-collage-1-3-400x225.jpg", duration: "10:30" },
-    { title: "Tamil Big Ass Wife Fucking", link: "https://1024terabox.com/s/1MSkPRrNjKHNxwb816Inf_Q", thumb: "https://i.postimg.cc/nh7hY6S0/Be-Funky-collage-2-2-400x225.jpg", duration: "10:30" },
-    { title: "Hot Girl Fucking Collection 10 Videos", link: "https://1024terabox.com/s/1Ej34lNxU6-zIkSK1LO9XeA", thumb: "https://i.postimg.cc/28zsGRqs/Be-Funky-collage-4-400x225.jpg", duration: "10:30" },
-    { title: "Hot Boobs Young GF Hard Fucking", link: "https://1024terabox.com/s/1MXToNAicSqRC4UKUXO7kHA", thumb: "https://i.postimg.cc/2SY7hr3s/1714511054607-scaled-1-400x225.jpg", duration: "10:30" },
-    { title: "Hot Big Boobs Girl Hard Fucking", link: "https://1024terabox.com/s/1LCyIgQsrMZeD0VKZV9jQQA", thumb: "https://i.postimg.cc/CKfgGDvm/1715061417522-scaled-1-400x225.jpg", duration: "10:30" },
-    { title: "Sexy Girl Banging Hard Fucking & Talking Dirty", link: "https://1024terabox.com/s/1K2DlW0iWx2fx4Qy38gaEhw", thumb: "https://i.postimg.cc/Y2LWvyfp/1714795154511-scaled-1-400x225.jpg", duration: "10:30" }
+    // Page 1 - 20 Videos
+    { title: "ASHOK KHARAT VIRAL MMS", link: "https://1024terabox.com/s/1WCeLmj-whLJ0bRqxKYdEUQ", thumb: "https://i.postimg.cc/bv3GBXYx/28535-(1).jpg", duration: "10:15" },
+    { title: "ASHOK KHARTA ALL PART WATCH 🥵", link: "https://1024terabox.com/s/12vla_9_a1O2vrog89sFFJA", thumb: "https://i.postimg.cc/zXbnHfDr/28834.jpg", duration: "12:30" },
+    { title: "ASHOK KHARAT PART 2 WATCH 🔥 🥵", link: "https://1024terabox.com/s/1592boUjCsbjCzCkcSscxDQ", thumb: "https://i.postimg.cc/q78whvLt/28538-(1).jpg", duration: "11:45" },
+    { title: "PART 1 VIRAL WATCH 🔥 🥵", link: "https://1024terabox.com/s/13ot-gkc-zgN0Y0ylI54ktQ", thumb: "https://i.postimg.cc/YC0TWYGQ/17655-(1).jpg", duration: "09:50" },
+    { title: "🔥 🥵SOFIK SONALI PART 2 FULL VIDEO 55 MIN", link: "https://1024terabox.com/s/1owpkCR5cU1f9gHZSxp6dhg", thumb: "https://i.postimg.cc/vHtGzrZW/IMG-20260108-WA0005-(1).jpg", duration: "55:00" },
+    { title: "PART 3 WATCH", link: "https://1024terabox.com/s/1NRJzFD6h4daAC8hevJ6ZEQ", thumb: "https://i.postimg.cc/yYm8Gqvg/18318-(1).jpg", duration: "08:40" },
+    { title: "12 MIN VIRAL VIDEO 🔥 🥵", link: "https://1024terabox.com/s/1Mt_lePBrcBXsaDBxXTMqqw", thumb: "https://i.postimg.cc/CKmYgSqC/IMG-20260113-WA0019-(1).jpg", duration: "12:00" },
+    { title: "40 MIN FULL VIDEO WATCH 🔥", link: "https://1024terabox.com/s/16DSAH0WFoP25x1Te7gW8Ug", thumb: "https://i.postimg.cc/hP5dSRV2/images-6-31-(1).jpg", duration: "40:00" },
+    { title: "GLASSES GIRL VIRAL MMS", link: "https://1024terabox.com/s/14oNUsQsOY1xqIKYrSGpAFg", thumb: "https://i.postimg.cc/D07qbQz5/IMG-20260201-WA0000-(1).jpg", duration: "09:20" },
+    { title: "SAPNA SHAH VIRAL VIDEO", link: "https://1024terabox.com/s/1s57QODr3bkCyHOdtDs1GXw", thumb: "https://i.postimg.cc/Kz6WXHJD/images-8-11-(1).jpg", duration: "10:55" },
+    { title: "2026 KA NEW VIRAL MMS ISS KA BHI", link: "https://1024terabox.com/s/1CFN3g_xW2gRTnv7ZxLTsJA", thumb: "https://i.postimg.cc/bNG7B1gt/15639-(1).jpg", duration: "08:30" },
+    { title: "JUSTIN D CRUZ & SAKSHI VIRAL MMS", link: "https://1024terabox.com/s/1u6lgn194IVuni9DlAbRDCQ", thumb: "https://i.postimg.cc/FKFG24vg/jsutic-1767349513774-d-(1).webp", duration: "07:45" },
+    { title: "MINSITER MANOHAR VIRAL VIDEO", link: "https://1024terabox.com/s/1GkdM7q_iakHYNVxiWxqxVA", thumb: "https://i.postimg.cc/52Bw4kgK/images-8-2-2-(1).jpg", duration: "09:10" },
+    { title: "INDIAN GIRLS FUCK WITH SLAPPING FACE 🥵 FULL VIDEO", link: "https://1024terabox.com/s/1PiFceCHnQN6TXUVArW--vg", thumb: "https://i.postimg.cc/c4jDgjQv/IMG-20260108-WA0031-(1).jpg", duration: "11:20" },
+    { title: "PAKISTANI WIFE SUCKING FEET AND ANAL", link: "https://1024terabox.com/s/1HOXwxuuEPS3LfXC5T4e6Mw", thumb: "https://i.postimg.cc/d1Kp7Xcb/IMG-20260108-WA0038-(1).jpg", duration: "10:05" },
+    { title: "jaisalmer viral Video tau 😄", link: "https://1024terabox.com/s/1chxjwXsRp86ppkjwbRQgRQ", thumb: "https://i.postimg.cc/wBb3gXK1/IMG-20260121-WA0005-1145x1536-(1).jpg", duration: "06:50" },
+    { title: "18 YEAR OLD OUTDOOR BLOWJOB HANDJOB XXX", link: "https://1024terabox.com/s/153cef6Owk9Z08L_yf-2VPQ", thumb: "https://i.postimg.cc/52SCdQNf/Whats-App-Image-2024-10-05-at-01-27-00-5be8d491-(1).jpg", duration: "08:15" },
+    { title: "Pagal Tissue Lalo Ful Xxx Video Movies", link: "https://1024terabox.com/s/1dzZ9cjBhihKmjCzfucAq0Q", thumb: "https://i.postimg.cc/Z5tRqbDr/Whats-App-Image-2024-10-04-at-12-18-05-1a826ded-1166x1536-(1).jpg", duration: "09:40" },
+    { title: "Cute Punjabi Nri Girl Latest Exclusive New Video", link: "https://1024terabox.com/s/1xG5JwUiArT1B2URs1KA7vw", thumb: "https://i.postimg.cc/SsD2XBYD/Whats-App-Image-2024-10-03-at-02-31-18-087f0043-(1).jpg", duration: "11:30" },
+    { title: "BAGWAN ASI GF HAR KISI KO MILAY", link: "https://1024terabox.com/s/1EP2yBroXZZ7N3A1knw_ybA", thumb: "https://i.postimg.cc/VvrXschK/Whats-App-Image-2024-12-13-at-11-00-05-566f06da-(1).jpg", duration: "11:25" },
+
+    // Page 2 - 20 Videos
+    { title: "INDIAN COLLEGE GIRL XXX", link: "https://1024terabox.com/s/1_LUkatnfgR4iLleg8mcUCA", thumb: "https://i.postimg.cc/mDqF55rF/Whats-App-Image-2024-12-13-at-11-05-06-4cff9d2d-(1).jpg", duration: "09:50" },
+    { title: "DO SCHOOL MA YE KON SI PADHI CHAL RHI HA", link: "https://1024terabox.com/s/1rB3mRWuQExU8VDuuvYCOdA", thumb: "https://i.postimg.cc/wBZxYCDz/Whats-App-Image-2024-12-11-at-22-54-42-88fa3594-(1).jpg", duration: "07:40" },
+    { title: "INDIAN COUPLE KISSING IN COUPLE AREA", link: "https://1024terabox.com/s/1PlUsLdumHy2qSvaxRHRmrA", thumb: "https://i.postimg.cc/FsGLLptn/Whats-App-Image-2024-12-13-at-10-56-22-803c6887-(1).jpg", duration: "06:15" },
+    { title: "Indian Girl Blowjob Mouth Hug Xxx Videos Sex", link: "https://1024terabox.com/s/11wxhRzan59zycj825vgLSQ", thumb: "https://i.postimg.cc/15RgsFgH/Whats-App-Image-2024-10-05-at-00-11-59-8fcff522-(1).jpg", duration: "12:30" },
+    { title: "Indian Girl Blowjob Cum in Mouth in Car", link: "https://1024terabox.com/s/1lJygQ_k4AZstelVfCFaTGQ", thumb: "https://i.postimg.cc/PxtHYWn6/Whats-App-Image-2024-10-04-at-10-54-57-1c27ffff-768x1352-(1).jpg", duration: "08:55" },
+    { title: "XXX VIDEO FUCKING", link: "https://1024terabox.com/s/1fS8IyXP3sFcvn5kwsxVATg", thumb: "https://i.postimg.cc/9FTW3FbZ/Whats-App-Image-2024-10-06-at-02-36-15-b37f330d-1-768x1306-(1).jpg", duration: "13:10" },
+    { title: "YE PUBLIC AREA MA KAYA CHL RHA HA", link: "https://1024terabox.com/s/1tMgFjE83pqlmDPAH4YHq-g", thumb: "https://i.postimg.cc/VNjZzMCs/Whats-App-Image-2024-12-11-at-22-59-52-48bf518f-(1).jpg", duration: "10:20" },
+    { title: "KYA CHUDAI HAI YAR XXX VIDEOS", link: "https://1024terabox.com/s/1um1IYNSugqATTM3FLalv1A", thumb: "https://i.postimg.cc/cHVVTwV2/Whats-App-Image-2024-10-06-at-07-03-14-498a76d3-(1).jpg", duration: "15:45" },
+    { title: "Pakistani Girl Blowjob In Car Xxx Video", link: "https://1024terabox.com/s/1N6447qWqJhazCfByuCDhtQ", thumb: "https://i.postimg.cc/QxPgBtgD/Whats-App-Image-2024-10-06-at-02-12-01-fe3e9a0a-1-1110x1536-(1).jpg", duration: "09:15" },
+    { title: "Fingering Masturbation Xxxx Videos", link: "https://1024terabox.com/s/16JNHLCiqM5ssIWW2Ji4RAg", thumb: "https://i.postimg.cc/xTjpGcbJ/Whats-App-Image-2024-10-06-at-02-05-17-4b4e6174-768x1346-(1).jpg", duration: "08:40" },
+    { title: "18 Year Old Boys Fucking Outdoor Xvideos Movies", link: "https://1024terabox.com/s/1qKC8tdN9CXBibP1Jcm7PbA", thumb: "https://i.postimg.cc/0yY682cZ/Whats-App-Image-2024-10-04-at-11-07-24-13956492-927x1536-(1).jpg", duration: "12:20" },
+    { title: "Indian Girl Blowjb Xxx Videos Movies", link: "https://1024terabox.com/s/1Zp7t2AjIBjoVbNYfTMKHGg", thumb: "https://i.postimg.cc/J7Sc00c9/Whats-App-Image-2024-10-04-at-10-24-42-6b8ee4b7-768x1317-(1).jpg", duration: "10:55" },
+    { title: "SAB MAL MUH MA NIKAL DIYA", link: "https://1024terabox.com/s/1PV_ciA4pxMLU3uSO5M6YaA", thumb: "https://i.postimg.cc/Hs4cmkZC/Whats-App-Image-2024-12-11-at-23-24-34-ccad5220-(1).jpg", duration: "07:30" },
+    { title: "FATIMA JATOI PAKISTANI TIKTOKER VIRAL MMS 6 MIN", link: "https://1024terabox.com/s/1-b_vob93cK1lF9fNcL1R6Q", thumb: "https://i.postimg.cc/gkNz4Xtc/IMG-20260113-013354-300-(1).jpg", duration: "06:00" },
+    { title: "INDIAN DESI VIRAL MMS", link: "https://1024terabox.com/s/1VdXH5l2KNIDZvKFydw-pxg", thumb: "https://i.postimg.cc/hv2k8x4K/Whats-App-Image-2024-12-11-at-21-08-38-e440eae6-(1).jpg", duration: "08:25" },
+    { title: "DEEPAK KALAL NEW FUCK VIRAL VIDEO", link: "https://1024terabox.com/s/1eo8wCUmOqv75o74QN5kCOw", thumb: "https://i.postimg.cc/44WqS6G0/Whats-App-Image-2024-12-11-at-21-45-45-f0b9a375-(1).jpg", duration: "11:10" },
+    { title: "BLOWJOB AND FUCK IN CAR", link: "https://1024terabox.com/s/1VCx_WppIIZ_WiUkrLGK52A", thumb: "https://i.postimg.cc/jSHhGTN5/Whats-App-Image-2024-12-11-at-21-58-48-1936b6c1-(1).jpg", duration: "09:45" },
+    { title: "INDIAN YOUNG COUPLE XXX", link: "https://1024terabox.com/s/14ivSeUkXqVsOTsOqdVJ-bA", thumb: "https://i.postimg.cc/SKwCstW4/Whats-App-Image-2024-12-11-at-22-02-35-1a4d984d-(1).jpg", duration: "14:30" },
+    { title: "XXX VIDEO FUCKING", link: "https://1024terabox.com/s/1fS8IyXP3sFcvn5kwsxVATg", thumb: "https://i.postimg.cc/9FTW3FbZ/Whats-App-Image-2024-10-06-at-02-36-15-b37f330d-1-768x1306-(1).jpg", duration: "13:10" },
+    { title: "YE PUBLIC AREA MA KAYA CHL RHA HA", link: "https://1024terabox.com/s/1tMgFjE83pqlmDPAH4YHq-g", thumb: "https://i.postimg.cc/VNjZzMCs/Whats-App-Image-2024-12-11-at-22-59-52-48bf518f-(1).jpg", duration: "10:20" },
+
+    // Page 3 - 20 Videos
+    { title: "INDIAN COLLEGE GIRL CUM IN MOUTH", link: "https://1024terabox.com/s/1rB3mRWuQExU8VDuuvYCOdA", thumb: "https://i.postimg.cc/vmZXnTSc/Whats-App-Image-2024-12-13-at-11-10-40-8d32042a-(1).jpg", duration: "08:20" },
+    { title: "INDIAN COUPLE KISSING IN COUPLE AREA", link: "https://1024terabox.com/s/1PlUsLdumHy2qSvaxRHRmrA", thumb: "https://i.postimg.cc/FsGLLptn/Whats-App-Image-2024-12-13-at-10-56-22-803c6887-(1).jpg", duration: "06:15" },
+    { title: "Indian Girl Blowjob Mouth Hug Xxx Videos Sex", link: "https://1024terabox.com/s/11wxhRzan59zycj825vgLSQ", thumb: "https://i.postimg.cc/15RgsFgH/Whats-App-Image-2024-10-05-at-00-11-59-8fcff522-(1).jpg", duration: "12:30" },
+    { title: "Indian Girl Blowjob Cum in Mouth in Car", link: "https://1024terabox.com/s/1lJygQ_k4AZstelVfCFaTGQ", thumb: "https://i.postimg.cc/PxtHYWn6/Whats-App-Image-2024-10-04-at-10-54-57-1c27ffff-768x1352-(1).jpg", duration: "08:55" },
+    { title: "XXX VIDEO FUCKING", link: "https://1024terabox.com/s/1fS8IyXP3sFcvn5kwsxVATg", thumb: "https://i.postimg.cc/9FTW3FbZ/Whats-App-Image-2024-10-06-at-02-36-15-b37f330d-1-768x1306-(1).jpg", duration: "13:10" },
+    { title: "YE PUBLIC AREA MA KAYA CHL RHA HA", link: "https://1024terabox.com/s/1tMgFjE83pqlmDPAH4YHq-g", thumb: "https://i.postimg.cc/VNjZzMCs/Whats-App-Image-2024-12-11-at-22-59-52-48bf518f-(1).jpg", duration: "10:20" },
+    { title: "KYA CHUDAI HAI YAR XXX VIDEOS", link: "https://1024terabox.com/s/1um1IYNSugqATTM3FLalv1A", thumb: "https://i.postimg.cc/cHVVTwV2/Whats-App-Image-2024-10-06-at-07-03-14-498a76d3-(1).jpg", duration: "15:45" },
+    { title: "Pakistani Girl Blowjob In Car Xxx Video", link: "https://1024terabox.com/s/1N6447qWqJhazCfByuCDhtQ", thumb: "https://i.postimg.cc/QxPgBtgD/Whats-App-Image-2024-10-06-at-02-12-01-fe3e9a0a-1-1110x1536-(1).jpg", duration: "09:15" },
+    { title: "Fingering Masturbation Xxxx Videos", link: "https://1024terabox.com/s/16JNHLCiqM5ssIWW2Ji4RAg", thumb: "https://i.postimg.cc/xTjpGcbJ/Whats-App-Image-2024-10-06-at-02-05-17-4b4e6174-768x1346-(1).jpg", duration: "08:40" },
+    { title: "18 Year Old Boys Fucking Outdoor Xvideos Movies", link: "https://1024terabox.com/s/1qKC8tdN9CXBibP1Jcm7PbA", thumb: "https://i.postimg.cc/0yY682cZ/Whats-App-Image-2024-10-04-at-11-07-24-13956492-927x1536-(1).jpg", duration: "12:20" },
+    { title: "Indian Girl Blowjb Xxx Videos Movies", link: "https://1024terabox.com/s/1Zp7t2AjIBjoVbNYfTMKHGg", thumb: "https://i.postimg.cc/J7Sc00c9/Whats-App-Image-2024-10-04-at-10-24-42-6b8ee4b7-768x1317-(1).jpg", duration: "10:55" },
+    { title: "SAB MAL MUH MA NIKAL DIYA", link: "https://1024terabox.com/s/1PV_ciA4pxMLU3uSO5M6YaA", thumb: "https://i.postimg.cc/Hs4cmkZC/Whats-App-Image-2024-12-11-at-23-24-34-ccad5220-(1).jpg", duration: "07:30" },
+    { title: "FATIMA JATOI PAKISTANI TIKTOKER VIRAL MMS 6 MIN", link: "https://1024terabox.com/s/1-b_vob93cK1lF9fNcL1R6Q", thumb: "https://i.postimg.cc/gkNz4Xtc/IMG-20260113-013354-300-(1).jpg", duration: "06:00" },
+    { title: "INDIAN DESI VIRAL MMS", link: "https://1024terabox.com/s/1VdXH5l2KNIDZvKFydw-pxg", thumb: "https://i.postimg.cc/hv2k8x4K/Whats-App-Image-2024-12-11-at-21-08-38-e440eae6-(1).jpg", duration: "08:25" },
+    { title: "DEEPAK KALAL NEW FUCK VIRAL VIDEO", link: "https://1024terabox.com/s/1eo8wCUmOqv75o74QN5kCOw", thumb: "https://i.postimg.cc/44WqS6G0/Whats-App-Image-2024-12-11-at-21-45-45-f0b9a375-(1).jpg", duration: "11:10" },
+    { title: "BLOWJOB AND FUCK IN CAR", link: "https://1024terabox.com/s/1VCx_WppIIZ_WiUkrLGK52A", thumb: "https://i.postimg.cc/jSHhGTN5/Whats-App-Image-2024-12-11-at-21-58-48-1936b6c1-(1).jpg", duration: "09:45" },
+    { title: "INDIAN YOUNG COUPLE XXX", link: "https://1024terabox.com/s/14ivSeUkXqVsOTsOqdVJ-bA", thumb: "https://i.postimg.cc/SKwCstW4/Whats-App-Image-2024-12-11-at-22-02-35-1a4d984d-(1).jpg", duration: "14:30" },
+    { title: "XXX VIDEO FUCKING", link: "https://1024terabox.com/s/1fS8IyXP3sFcvn5kwsxVATg", thumb: "https://i.postimg.cc/9FTW3FbZ/Whats-App-Image-2024-10-06-at-02-36-15-b37f330d-1-768x1306-(1).jpg", duration: "13:10" },
+    { title: "YE PUBLIC AREA MA KAYA CHL RHA HA", link: "https://1024terabox.com/s/1tMgFjE83pqlmDPAH4YHq-g", thumb: "https://i.postimg.cc/VNjZzMCs/Whats-App-Image-2024-12-11-at-22-59-52-48bf518f-(1).jpg", duration: "10:20" },
+    { title: "KYA CHUDAI HAI YAR XXX VIDEOS", link: "https://1024terabox.com/s/1um1IYNSugqATTM3FLalv1A", thumb: "https://i.postimg.cc/cHVVTwV2/Whats-App-Image-2024-10-06-at-07-03-14-498a76d3-(1).jpg", duration: "15:45" },
+
+    // Page 4 - 14 Videos
+    { title: "INDIAN DESI VIRAL MMS", link: "https://1024terabox.com/s/1VdXH5l2KNIDZvKFydw-pxg", thumb: "https://i.postimg.cc/hv2k8x4K/Whats-App-Image-2024-12-11-at-21-08-38-e440eae6-(1).jpg", duration: "08:25" },
+    { title: "DEEPAK KALAL NEW FUCK VIRAL VIDEO", link: "https://1024terabox.com/s/1eo8wCUmOqv75o74QN5kCOw", thumb: "https://i.postimg.cc/44WqS6G0/Whats-App-Image-2024-12-11-at-21-45-45-f0b9a375-(1).jpg", duration: "11:10" },
+    { title: "BLOWJOB AND FUCK IN CAR", link: "https://1024terabox.com/s/1VCx_WppIIZ_WiUkrLGK52A", thumb: "https://i.postimg.cc/jSHhGTN5/Whats-App-Image-2024-12-11-at-21-58-48-1936b6c1-(1).jpg", duration: "09:45" },
+    { title: "INDIAN YOUNG COUPLE XXX", link: "https://1024terabox.com/s/14ivSeUkXqVsOTsOqdVJ-bA", thumb: "https://i.postimg.cc/SKwCstW4/Whats-App-Image-2024-12-11-at-22-02-35-1a4d984d-(1).jpg", duration: "14:30" },
+    { title: "XXX VIDEO FUCKING", link: "https://1024terabox.com/s/1fS8IyXP3sFcvn5kwsxVATg", thumb: "https://i.postimg.cc/9FTW3FbZ/Whats-App-Image-2024-10-06-at-02-36-15-b37f330d-1-768x1306-(1).jpg", duration: "13:10" },
+    { title: "YE PUBLIC AREA MA KAYA CHL RHA HA", link: "https://1024terabox.com/s/1tMgFjE83pqlmDPAH4YHq-g", thumb: "https://i.postimg.cc/VNjZzMCs/Whats-App-Image-2024-12-11-at-22-59-52-48bf518f-(1).jpg", duration: "10:20" },
+    { title: "KYA CHUDAI HAI YAR XXX VIDEOS", link: "https://1024terabox.com/s/1um1IYNSugqATTM3FLalv1A", thumb: "https://i.postimg.cc/cHVVTwV2/Whats-App-Image-2024-10-06-at-07-03-14-498a76d3-(1).jpg", duration: "15:45" },
+    { title: "Pakistani Girl Blowjob In Car Xxx Video", link: "https://1024terabox.com/s/1N6447qWqJhazCfByuCDhtQ", thumb: "https://i.postimg.cc/QxPgBtgD/Whats-App-Image-2024-10-06-at-02-12-01-fe3e9a0a-1-1110x1536-(1).jpg", duration: "09:15" },
+    { title: "Fingering Masturbation Xxxx Videos", link: "https://1024terabox.com/s/16JNHLCiqM5ssIWW2Ji4RAg", thumb: "https://i.postimg.cc/xTjpGcbJ/Whats-App-Image-2024-10-06-at-02-05-17-4b4e6174-768x1346-(1).jpg", duration: "08:40" },
+    { title: "18 Year Old Boys Fucking Outdoor Xvideos Movies", link: "https://1024terabox.com/s/1qKC8tdN9CXBibP1Jcm7PbA", thumb: "https://i.postimg.cc/0yY682cZ/Whats-App-Image-2024-10-04-at-11-07-24-13956492-927x1536-(1).jpg", duration: "12:20" },
+    { title: "Indian Girl Blowjb Xxx Videos Movies", link: "https://1024terabox.com/s/1Zp7t2AjIBjoVbNYfTMKHGg", thumb: "https://i.postimg.cc/J7Sc00c9/Whats-App-Image-2024-10-04-at-10-24-42-6b8ee4b7-768x1317-(1).jpg", duration: "10:55" },
+    { title: "SAB MAL MUH MA NIKAL DIYA", link: "https://1024terabox.com/s/1PV_ciA4pxMLU3uSO5M6YaA", thumb: "https://i.postimg.cc/Hs4cmkZC/Whats-App-Image-2024-12-11-at-23-24-34-ccad5220-(1).jpg", duration: "07:30" },
+    { title: "FATIMA JATOI PAKISTANI TIKTOKER VIRAL MMS 6 MIN", link: "https://1024terabox.com/s/1-b_vob93cK1lF9fNcL1R6Q", thumb: "https://i.postimg.cc/gkNz4Xtc/IMG-20260113-013354-300-(1).jpg", duration: "06:00" },
+    { title: "INDIAN DESI VIRAL MMS", link: "https://1024terabox.com/s/1VdXH5l2KNIDZvKFydw-pxg", thumb: "https://i.postimg.cc/hv2k8x4K/Whats-App-Image-2024-12-11-at-21-08-38-e440eae6-(1).jpg", duration: "08:25" }
 ];
 
-const videosPerPage = 4;
+const videosPerPage = 20;
 let currentPage = 1;
 
 function displayVideos(page) {
@@ -111,7 +144,7 @@ function displayVideos(page) {
                 <div class="thumb">
                     <div class="thumb-content">
                         <a href="${video.link}" target="_blank" rel="noopener">
-                            <img src="${video.thumb}" alt="">
+                            <img src="${video.thumb}" alt="${video.title}">
                             <span class="duration">${video.duration}</span>
                         </a>
                     </div>
@@ -127,7 +160,6 @@ function displayVideos(page) {
     });
     html += '</ul>';
     document.getElementById('video-grid').innerHTML = html;
-
     renderPagination();
 }
 
